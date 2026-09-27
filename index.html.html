@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Nosso Cantinho ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         TELA INICIAL
+    ========================================== -->
+
+    <section id="login">
+
+        <div class="login-box">
+
+            <h1>
+                Bem-vinda meu amor
+            </h1>
+
+            <p>
+                Tenho uma coisa para você
+            </p>
+
+            <button
+                class="btn-inicial"
+                onclick="mostrarBrincadeira()">
+
+                Clique aqui 
+
+            </button>
+
+
+            <!-- BRINCADEIRA -->
+
+            <div
+                id="brincadeira"
+                class="brincadeira">
+
+
+                <!-- ETAPA 2 -->
+
+                <div id="etapa2">
+
+                    <h2>
+                        Vai mesmo entrar?
+                    </h2>
+
+                    <p>
+                        Você realmente quer descobrir o que tem aqui?
+                    </p>
+
+                    <div class="botoes">
+
+                        <button
+                            class="btn-sim"
+                            onclick="proximaEtapa()">
+
+                            Sim 
+
+                        </button>
+
+                        <button
+                            class="btn-nao"
+                            onmouseover="fugir(this)"
+                            ontouchstart="fugir(this)">
+
+                            Não 
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ETAPA 3 -->
+
+                <div id="etapa3">
+
+                    <h2>
+                        Se entrar vai ter que me dar um beijinho...
+                    </h2>
+
+                    <p>
+                        Pensa bem...
+                    </p>
+
+                    <div class="botoes">
+
+                        <button
+                            class="btn-sim"
+                            onclick="ultimaEtapa()">
+
+                            Ganho um beijinho? 
+
+                        </button>
+
+                        <button
+                            class="btn-nao"
+                            onmouseover="fugir(this)"
+                            ontouchstart="fugir(this)">
+
+                            Não ta merecendo 
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ETAPA 4 -->
+
+                <div id="etapa4">
+
+                    <h2>
+                        Última chance...
+                    </h2>
+
+                    <p>
+                        Agora me deve um beijinho.
+                    </p>
+
+                    <button
+                        class="btn-final"
+                        onclick="entrar()">
+
+                        ENTRAR 
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SITE PRINCIPAL
+    ========================================== -->
+
+    <section id="principal">
+
+
+        <!-- CORAÇÕES -->
+
+        <div id="coracoes"></div>
+
+
+
+        <!-- =====================================
+             MENSAGEM DE 9 MESES
+        ====================================== -->
+
+        <div
+            id="mensagemInicial"
+            class="mensagem-inicial">
+
+            <div class="mensagem-conteudo">
+
+                <h1>
+                    Feliz 7 meses,
+                    <br>
+                    meu amor! Tudo com você é mais feliz, sou extremamente grato por ter você ao meu lado!
+                </h1>
+
+                <p>
+                    Eu te amo muitão!
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             ÁREA DAS FOTOS
+        ====================================== -->
+
+        <div
+            id="areaMidia"
+            class="area-midia">
+
+
+            <div class="quadro-midia">
+
+                <img
+                    id="fotoSlideshow"
+                    src="imagens/foto1.jpg"
+                    alt="Nossa foto"
+                    class="foto">
+
+            </div>
+
+
+            <h1 id="tituloFinal">
+                Eu + você = ❤️
+            </h1>
+
+
+            <p id="textoFinal">
+
+                212 dias são pouco pra mensurar o quanto você mudou minha vida e trouxe graça, carinho, amor, atenção e luz para mim.
+                <br>
+                Tenho certeza que vou continuar sendo muito feliz ao seu lado, eu te amo!!!!!
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================
+             VÍDEO
+        ====================================== -->
+
+        <div
+            id="videoFinalContainer"
+            class="video-final-container">
+
+
+            <video
+                id="videoFinal"
+                class="video-final"
+                muted
+                playsinline>
+
+                <source
+                    src="imagens/video.mp4"
+                    type="video/mp4">
+
+            </video>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         MÚSICA
+    ========================================== -->
+
+    <audio
+        id="musica"
+        loop>
+
+        <source
+            src="musica/musica.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="script.js">
+    </script>
+
+
+</body>
+
+</html>

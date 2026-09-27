@@ -1,0 +1,758 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   TELA INICIAL
+========================================= */
+
+#login {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff758c,
+            #ff7eb3
+        );
+
+    color: white;
+}
+
+
+.login-box {
+
+    width: min(90%, 600px);
+
+    text-align: center;
+
+    padding: 50px 35px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+}
+
+
+.login-box h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.login-box p {
+
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+button {
+
+    border: none;
+
+    padding: 15px 32px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
+}
+
+
+.btn-inicial {
+
+    background: white;
+
+    color: #ff4f81;
+}
+
+
+.btn-sim {
+
+    background: white;
+
+    color: #ff4f81;
+}
+
+
+.btn-nao {
+
+    background: #333;
+
+    color: white;
+}
+
+
+.btn-final {
+
+    margin-top: 10px;
+
+    padding: 17px 45px;
+
+    background: white;
+
+    color: #ff4f81;
+
+    font-size: 20px;
+}
+
+
+
+/* =========================================
+   BRINCADEIRA
+========================================= */
+
+.brincadeira {
+
+    display: none;
+
+    margin-top: 30px;
+
+    animation:
+        aparecer 0.5s ease;
+}
+
+
+.brincadeira h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+
+.brincadeira p {
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+}
+
+
+.botoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+#etapa2 {
+    display: block;
+}
+
+
+#etapa3 {
+    display: none;
+}
+
+
+#etapa4 {
+    display: none;
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.8);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+
+/* =========================================
+   SITE PRINCIPAL
+========================================= */
+
+#principal {
+
+    display: none;
+
+    width: 100%;
+
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff758c,
+            #ff7eb3
+        );
+}
+
+
+
+/* =========================================
+   ÁREA DAS FOTOS
+========================================= */
+
+.area-midia {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+
+/* =========================================
+   QUADRO DAS FOTOS
+========================================= */
+
+.quadro-midia {
+
+    width: 500px;
+
+    height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    border: 8px solid white;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+    box-shadow:
+        0 10px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+}
+
+
+.foto {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.foto.trocando {
+
+    opacity: 0;
+
+    transform:
+        scale(0.85);
+}
+
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.area-midia h1 {
+
+    margin-top: 25px;
+
+    font-size: 40px;
+
+    text-shadow:
+        0 3px 15px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+}
+
+
+.area-midia p {
+
+    margin-top: 15px;
+
+    max-width: 500px;
+
+    padding: 0 20px;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+
+
+/* =========================================
+   MENSAGEM INICIAL
+========================================= */
+
+.mensagem-inicial {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+    z-index: 100;
+
+    animation:
+        mensagemEntrada 1s ease;
+}
+
+
+.mensagem-conteudo {
+
+    padding: 30px;
+}
+
+
+.mensagem-inicial h1 {
+
+    font-size: 65px;
+
+    line-height: 1.15;
+
+    color: white;
+
+    text-shadow:
+        0 5px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.5
+        );
+}
+
+
+.mensagem-inicial p {
+
+    margin-top: 25px;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+        0 4px 15px
+        rgba(
+            0,
+            0,
+            0,
+            0.5
+        );
+}
+
+
+@keyframes mensagemEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.7);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+
+/* =========================================
+   CORAÇÕES SUBINDO
+========================================= */
+
+#coracoes {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+.coracao {
+
+    position: absolute;
+
+    bottom: -70px;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    animation-name:
+        subirCoracao;
+
+    animation-timing-function:
+        linear;
+
+    animation-fill-mode:
+        forwards;
+}
+
+
+@keyframes subirCoracao {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-115vh)
+            rotate(360deg)
+            scale(1.5);
+
+        opacity: 0;
+    }
+}
+
+
+
+/* =========================================
+   VÍDEO
+========================================= */
+
+.video-final-container {
+
+    display: none;
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    height: auto;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: transparent;
+}
+
+
+.video-final {
+
+    width: 500px;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 25px;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+    background: #ff758c;
+}
+
+
+
+/* =========================================
+   EXPLOSÃO DE CORAÇÕES
+========================================= */
+
+.coracao-explosao {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 50%;
+
+    z-index: 150;
+
+    pointer-events: none;
+
+    font-size: 30px;
+
+    animation:
+        explosao 1.5s ease-out
+        forwards;
+}
+
+
+@keyframes explosao {
+
+    0% {
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            scale(0.3);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(1.5)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .login-box {
+
+        width: 90%;
+
+        padding:
+            35px 20px;
+    }
+
+
+    .login-box h1 {
+
+        font-size: 32px;
+    }
+
+
+    .brincadeira h2 {
+
+        font-size: 22px;
+    }
+
+
+    .quadro-midia {
+
+        width: 85vw;
+
+        height: 85vw;
+
+        max-width: 500px;
+
+        max-height: 500px;
+    }
+
+
+    .video-final {
+
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    .area-midia h1 {
+
+        font-size: 30px;
+    }
+
+
+    .area-midia p {
+
+        font-size: 17px;
+    }
+
+
+    .mensagem-inicial h1 {
+
+        font-size: 40px;
+    }
+
+
+    .mensagem-inicial p {
+
+        font-size: 27px;
+    }
+
+}
